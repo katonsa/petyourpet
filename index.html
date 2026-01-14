@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>VirtualPet</title>
+  <link rel="stylesheet" href="./assets/css/style.css">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Play:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA==" crossorigin="anonymous" />
+
+  <style>
+    body {
+      font-family: 'Play', sans-serif;
+    }
+  </style>
+</head>
+<body>
+  <div class="container mx-auto justify-center">
+    <header class="flex justify-between my-5">
+      <a href="./index.html">
+        <h1 class="inline text-2xl font-bold">VirtualPet</h1>
+      </a>
+      
+      <button id="logoutButton">
+        Logout
+      </button>
+    </header>
+    <main class="w-full select-none bg-gray-200 rounded pb-5">
+
+      <!-- Header -->
+      <div class="flex flex-row justify-between items-center bg-purple-400 p-4 rounded-t shadow mb-5 text-white">
+        <div class="flex flex-col">
+          <div>
+            <i class="fas fa-coins text-yellow-400"></i>
+            <span id="spanUserCoin">220000</span>
+          </div>
+          <div>
+              <i class="fas fa-fish"></i>
+            <span id="spanUserFood">50 / 100</span>
+          </div>
+          <div>
+            <i class="fas fa-paw"></i>
+            <span id="spanUserPets">
+              0 / 4
+            </span>
+          </div>
+        </div>
+
+        <div class="flex space-x-4">
+          <button
+            id="storeButton"
+            class="py-2 px-4 border-b-2 border-green-800 bg-gradient-to-b from-green-500 to-green-600 leading-tight rounded bg-green-600 text-white focus:shadow focus:outline-none"
+          >
+            <i class="fa fa-store"></i> Toko
+          </button>
+        </div>
+      </div>
+
+      <div id="EmptyPetStatePage">
+        <div id="step_a" class="p-4 flex">
+          <div
+            id="EmptyPetStateButton"
+            class="w-1/4 flex flex-col items-center p-5 border-2 rounded border-purple-400 hover:border-purple-600 border-dashed cursor-pointer"
+          >
+            <span class="mb-5">
+              <img src="./assets/icons/icons8-pets-96.png" alt="">
+            </span>
+            <span class="mb-5 text-xl font-bold">
+              Dapatkan hewan virtual pertama anda!
+            </span>
+            <span>Ini adalah langkah pertama anda untuk mengkoleksi hewan virtual anda.</span>
+          </div>
+        </div>
+      </div>
+
+      <div id="petsSection" class="hidden">
+        <div id="step_b" class="px-4 flex justify-between">
+          <h2 class="text-3xl">Peliharaan saya</h2>
+        </div>
+        <div id="petLists" class="px-4 grid grid-cols-4 gap-4">
+        </div>
+      </div>
+
+      <div id="storeSection" class="hidden">
+        <div class="px-4 flex justify-between">
+          <h2 class="text-3xl">Toko</h2>
+          
+          <button id="Store_backButton" class="py-2 px-4 border-b-2 border-red-800 bg-gradient-to-b from-red-500 to-red-600 leading-tight rounded bg-red-600 text-white focus:shadow focus:outline-none">
+            Peliharaan saya
+          </button>
+        </div>
+
+        <div id="shop_items" class="p-4 grid grid-cols-4 gap-4">
+        </div>
+      </div>
+    </main>
+
+    <footer class="flex p-5 justify-center bg-gray-700 text-white rounded-b">
+      &copy; 2020 namingthingsishard.
+    </footer>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
+  <script src="https://cdn.jsdelivr.net/npm/walkthrough-js@0.0.8/dist/walkthrough.bundle.js" integrity="sha256-9jEQD4kL26PwsWcwty5EhpLeqs8jHGuIU5rvLSKCknE=" crossorigin="anonymous"></script>
+  <script src="./app.js"></script>
+</body>
+</html>
